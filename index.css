@@ -1,0 +1,15 @@
+ul.list
+{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+li 
+{
+    border: 2px solid;
+    background-color: lightgray;
+    width: 25%;
+}
