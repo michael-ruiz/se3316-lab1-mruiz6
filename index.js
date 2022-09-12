@@ -33,6 +33,12 @@ function searchName()
             count++;
         }
 
+        else if (text == "")
+        {
+            pokemon[i].style.display = "all";
+            count = 0;
+        }
+
         else 
         {
             pokemon[i].style.display = "none";

@@ -19,3 +19,13 @@ input.pokeInput
 {
     width: 150px;
 }
+
+div.references
+{
+    text-align: center;
+}
+
+body 
+{
+    background-color: gray;    
+}
