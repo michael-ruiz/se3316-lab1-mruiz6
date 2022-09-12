@@ -51,16 +51,46 @@ function searchName()
         pName = pId.split(" ")[0];
         text = input.value.toUpperCase();
 
-        if (pName.includes(text) && count <= 5)
+        if (pName.includes(text) && count < 5)
         {
             pokemon[i].style.display = "";
             count++;
         }
 
-        else if (text == "")
+        else if (text == "" || text == null)
         {
-            pokemon[i].style.display = "all";
-            count = 0;
+            pokemon[i].style.display = "";
+        }
+
+        else 
+        {
+            pokemon[i].style.display = "none";
+        }
+    }
+}
+
+function searchNumber()
+{
+    var input, pokemon;
+    var count = 0;
+    input = document.getElementById("searchNumber");
+    pokemon = document.getElementsByTagName("li");
+
+    for (i = 0; i < pokemon.length; i++)
+    {
+        pId = pokemon[i].getAttribute("id").toUpperCase();
+        pNum = pId.split(" ")[2];
+        text = input.value.toUpperCase();
+
+        if ((pNum.indexOf(text) > -1) && count < 5)
+        {
+            pokemon[i].style.display = "";
+            count++;
+        }
+
+        else if (text == "" || text == null)
+        {
+            pokemon[i].style.display = "";
         }
 
         else 
