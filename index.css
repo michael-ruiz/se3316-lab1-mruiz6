@@ -13,3 +13,8 @@ li
     background-color: lightgray;
     width: 25%;
 }
+
+input.pokeInput 
+{
+    width: 150px;
+}

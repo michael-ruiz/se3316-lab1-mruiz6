@@ -6,44 +6,47 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
 </head>
 <body>
 
 <h1 align="center">Pokédex</h1>
 
 <div align="center" class="search">
-    <input type="text" placeholder="Search by name">
-    <input type="text" placeholder="Search by number">
+    <input class="pokeInput" type="text" id="searchName" onkeyup="allLetter()" placeholder="Search by name">
+    <button onclick="searchName()">Search</button>
+    <input class="pokeInput" type="number" id="searchNumber" min="1" max="20" placeholder="Search by number" >
+    <button>Search</button>
 </div>
 
 <div class="container"> 
-    <ul class="list">
-        <li>
+    <ul class="list" id="myUl">
+        <li id="Bulbasaur - 001">
             <img src="pokemon/1.png", alt="Bulbasaur" width="250" height="250">
             <br> #001
             <br> description
         </li>
-        <li> 
+        <li id="Ivysaur - 002">
             <img src="pokemon/2.png", alt="Ivysaur" width="250" height="250">
             <br> #002
             <br> description
         </li>
-        <li> 
+        <li id="Venusaur - 003"> 
             <img src="pokemon/3.png", alt="Venusaur" width="250" height="250">
             <br> #003
             <br> description
         </li>
-        <li> 
+        <li id="Charmander - 004"> 
             <img src="pokemon/4.png", alt="Charmander" width="250" height="250">
             <br> #004
             <br> description
         </li>
-        <li> 
+        <li id="Charmeleon - 005"> 
             <img src="pokemon/5.png", alt="Charmeleon" width="250" height="250">
             <br> #005
             <br> description
         </li>
-        <li> 
+        <li id="Charizard - 006"> 
             <img src="pokemon/6.png", alt="Charizard" width="250" height="250">
             <br> #006
             <br> description
