@@ -14,6 +14,30 @@ function allLetter()
     }
 }
 
+function allNumber()
+{
+    var input = document.getElementById("searchNumber");
+    var numbers = /\d/;
+
+    if (input.value.match(numbers))
+    {
+        if (1 <= parseInt(input.value) && parseInt(input.value) <= 20)
+        {
+            return true;
+        }
+
+        else 
+        {
+            input.value = "";
+        }
+    }
+
+    else 
+    {
+        input.value = "";
+    }
+}
+
 function searchName()
 {
     var input, pokemon;
