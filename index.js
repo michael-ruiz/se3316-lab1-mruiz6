@@ -16,7 +16,8 @@ function allLetter()
 
 function searchName()
 {
-    var input, pokemon, alertText;
+    var input, pokemon;
+    var count = 0;
     input = document.getElementById("searchName");
     pokemon = document.getElementsByTagName("li");
 
@@ -26,18 +27,15 @@ function searchName()
         pName = pId.split(" ")[0];
         text = input.value.toUpperCase();
 
-        if (text == pName)
+        if (pName.includes(text) && count <= 5)
         {
-            alertText = "Pokémon Found! \n" + pId;
-            break;
+            pokemon[i].style.display = "";
+            count++;
         }
 
         else 
         {
-            alertText = "No Pokémon Found";
+            pokemon[i].style.display = "none";
         }
     }
-    alert(alertText);
 }
-
-function searchNumber(){}
