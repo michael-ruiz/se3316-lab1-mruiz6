@@ -13,6 +13,14 @@ li
     background-color: lightgray;
     width: 20%;
     border-radius: 12px;
+    margin: 5px;
+}
+
+img 
+{
+    margin: 5px;
+    width: 75%;
+    image-rendering: pixelated;
 }
 
 input.pokeInput 
