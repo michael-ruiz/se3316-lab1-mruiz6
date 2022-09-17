@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>SE 3316 Lab 1</title>
-<meta name="description" content="">
-<meta name="author" content="">
 <link rel="stylesheet" href="index.css">
 <script src="index.js"></script>
 </head>
@@ -13,8 +11,10 @@
 <h1 align="center">Pokédex</h1>
 
 <div align="center" class="search">
-    <input class="pokeInput" type="text" id="searchName" onkeyup="allLetter(); searchName()" placeholder="Search by name" maxlength="20">
-    <input class="pokeInput" type="text" id="searchNumber" onkeyup="allNumber(); searchNumber()" placeholder="Search by number" >
+    <input class="pokeInput" type="text" id="searchName" onkeyup="allLetter(); resetSearch(0)" placeholder="Search by name" maxlength="20">
+    <button onclick="searchName()">Search</button>
+    <input class="pokeInput" type="text" id="searchNumber" onkeyup="allNumber(); resetSearch(1)" placeholder="Search by number" >
+    <button onclick="searchNumber()">Search</button>
 </div>
 
 <div class="container"> 
