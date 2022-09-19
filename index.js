@@ -75,7 +75,7 @@ function searchName()
     for (i = 0; i < pokemon.length; i++)
     {
         pId = pokemon[i].getAttribute("id").toUpperCase();
-        pName = pId.split(" ")[0];
+        pName = pId.split("-")[0];
         text = input.value.toUpperCase();
 
         if (pName.includes(text) && count < 5)
@@ -113,7 +113,7 @@ function searchNumber()
     for (i = 0; i < pokemon.length; i++)
     {
         pId = pokemon[i].getAttribute("id").toUpperCase();
-        pNum = pId.split(" ")[2];
+        pNum = pId.split("-")[1];
         text = input.value;
 
         if ((pNum.indexOf(text) > -1) && count < 5)

@@ -33,6 +33,16 @@ div.references
     text-align: center;
 }
 
+div.search
+{
+    text-align: center;
+}
+
+h1.title
+{
+    text-align: center;
+}
+
 body 
 {
     background-color: gray; 
