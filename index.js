@@ -26,11 +26,19 @@ function allLetter()
 {
     let input = document.getElementById("searchName");
     let letters = "abcdefghijklmnopqrstuvwxyz";
-    let lastLetter = input.value.charAt(input.length - 1);
+    let lastLetter = input.value.charAt(input.value.length - 1);
 
-    if(letters.includes(lastLetter.toLowerCase()))
+    if (input.value.length <= 20)
     {
-        return true;
+        if (letters.includes(lastLetter.toLowerCase()))
+        {
+            return true;
+        }
+
+        else 
+        {
+            input.value = "";
+        }
     }
 
     else 
@@ -42,12 +50,12 @@ function allLetter()
 function allNumber()
 {
     let input = document.getElementById("searchNumber");
-    let lastDigit = input.value.charAt(input.length - 1);
+    let lastDigit = input.value.charAt(input.value.length - 1);
     let numbers = "1234567890";
 
     if (numbers.includes(lastDigit))
     {
-        if (1 <= parseInt(input.value) && parseInt(input.value) <= 20)
+        if (1 <= input.value && input.value <= 20)
         {
             return true;
         }
