@@ -25,7 +25,10 @@ img
 
 input.pokeInput 
 {
-    width: 150px;
+    border-radius: 10px;
+    margin-left: 30px;
+    height: 25px;
+    width: 200px;
 }
 
 div.references

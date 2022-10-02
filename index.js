@@ -1,5 +1,3 @@
-var firstRun = true;
-
 function allLetter()
 {
     let input = document.getElementById("searchName");
