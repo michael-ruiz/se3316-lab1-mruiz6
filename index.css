@@ -16,6 +16,15 @@ li.static
     margin: 5px;
 }
 
+li.result
+{
+    border: 5px solid;
+    background-color: gold;
+    width: 20%;
+    border-radius: 12px;
+    margin: 5px;
+}
+
 img 
 {
     margin: 5px;
