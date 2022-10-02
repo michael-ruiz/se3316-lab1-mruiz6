@@ -50,12 +50,11 @@ function allNumber()
 
 function searchName()
 {
-    let input, pokemon
     let result = "";
     let count = 0;
     let resultList = document.createElement("ul");
-    input = document.getElementById("searchName");
-    pokemon = document.getElementsByClassName("static");
+    let input = document.getElementById("searchName");
+    let pokemon = document.getElementsByClassName("static");
 
     for (i = 0; i < pokemon.length; i++)
     {
@@ -93,12 +92,11 @@ function searchName()
 
 function searchNumber()
 {
-    let input, pokemon
     let result = "";
     let count = 0;
     let resultList = document.createElement("ul");
-    input = document.getElementById("searchNumber");
-    pokemon = document.getElementsByClassName("static");
+    let input = document.getElementById("searchNumber");
+    let pokemon = document.getElementsByClassName("static");
 
     for (i = 0; i < pokemon.length; i++)
     {
