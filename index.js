@@ -67,8 +67,8 @@ function searchName()
 
         if (pName.includes(text) && count < 5)
         {
-            text = pokemon[i].innerHTML;
-            result += `<li class="result">${text}</li>`;
+            pokemonText = pokemon[i].innerHTML;
+            result += `<li class="result">${pokemonText}</li>`;
             count++;
         }
     }
@@ -95,11 +95,12 @@ function searchName()
 
 function searchNumber()
 {
-    let input, pokemon;
-    let alertText = "";
+    let input, pokemon
+    let result = "";
     let count = 0;
+    let resultList = document.createElement("ul");
     input = document.getElementById("searchNumber");
-    pokemon = document.getElementsByTagName("li");
+    pokemon = document.getElementsByClassName("static");
 
     for (i = 0; i < pokemon.length; i++)
     {
@@ -109,24 +110,28 @@ function searchNumber()
 
         if ((pNum.indexOf(text) > -1) && count < 5)
         {
-            pokemon[i].style.display = "";
-            alertText += `${description[i]} \nView details On Screen \n----------------------\n`;
+            pokemonText = pokemon[i].innerHTML;
+            result += `<li class="result">${pokemonText}</li>`;
             count++;
         }
-
-        else 
-        {
-            pokemon[i].style.display = "none";
-        }
     }
 
-    if (alertText == "")
+    if (document.getElementById("resultList") != null)
     {
-        alert("No Pokémon Found");
+        document.getElementById("resultList").parentNode.removeChild(document.getElementById("resultList"));
     }
 
-    else 
+    if (result != "")
     {
-        alert(alertText);
+       resultList.innerHTML = result;
+       resultList.className = "list";
+       resultList.id = "resultList";
+       document.getElementById("results").appendChild(resultList);
+       result = "";
+    }
+
+    if (input.value == "")
+    {
+        document.getElementById("resultList").parentNode.removeChild(document.getElementById("resultList"));
     }
 }
