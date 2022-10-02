@@ -7,7 +7,7 @@ ul.list
     justify-content: center;
 }
 
-li 
+li.static
 {
     border: 2px solid;
     background-color: lightgray;
