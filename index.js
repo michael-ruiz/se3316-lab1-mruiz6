@@ -86,6 +86,11 @@ function searchName()
        document.getElementById("results").appendChild(resultList);
        result = "";
     }
+
+    if (input.value == "")
+    {
+        document.getElementById("resultList").parentNode.removeChild(document.getElementById("resultList"));
+    }
 }
 
 function searchNumber()
@@ -123,42 +128,5 @@ function searchNumber()
     else 
     {
         alert(alertText);
-    }
-}
-
-function resetSearch(opt)
-{
-    let input1 = document.getElementById("searchName");
-    let input2 = document.getElementById("searchNumber");
-    let pokemon = document.getElementsByTagName("li");
-
-    if (opt == 0)
-    {
-        for (i = 0; i < pokemon.length; i++)
-        {
-            pId = pokemon[i].getAttribute("id").toUpperCase();
-            pNum = pId.split(" ")[0];
-            text = input1.value.toUpperCase();
-
-            if (text == "" || text == null)
-            {
-                pokemon[i].style.display = "";
-            }
-        }
-    }
-
-    if (opt == 1)
-    {
-        for (i = 0; i < pokemon.length; i++)
-        {
-            pId = pokemon[i].getAttribute("id").toUpperCase();
-            pNum = pId.split(" ")[2];
-            text = input2.value;
-
-            if (text == "" || text == null)
-            {
-                pokemon[i].style.display = "";
-            }
-        }
     }
 }
