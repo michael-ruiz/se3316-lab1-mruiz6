@@ -74,8 +74,8 @@ function allNumber()
 
 function searchName()
 {
-    let input, pokemon;
-    let alertText = "";
+    let input, pokemon
+    let result = "";
     let count = 0;
     input = document.getElementById("searchName");
     pokemon = document.getElementsByTagName("li");
@@ -88,25 +88,16 @@ function searchName()
 
         if (pName.includes(text) && count < 5)
         {
-            pokemon[i].style.display = "";
-            alertText += `${description[i]} \nView details On Screen \n----------------------\n`;
+            text = pokemon[i].innerHTML;
+            result += `<li>${text}</li>`;
             count++;
         }
-
-        else 
-        {
-            pokemon[i].style.display = "none";
-        }
     }
 
-    if (alertText == "")
+    if (result != "")
     {
-        alert("No Pokémon Found");
-    }
-
-    else 
-    {
-        alert(alertText);
+       document.getElementById("results").innerHTML = result;
+       result = "";
     }
 }
 
