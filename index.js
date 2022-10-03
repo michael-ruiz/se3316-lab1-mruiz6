@@ -50,7 +50,7 @@ function allNumber()
 
 function searchName()
 {
-    let result = "";
+    let result;
     let count = 0;
     let resultList = document.createElement("ul");
     let input = document.getElementById("searchName");
@@ -64,8 +64,15 @@ function searchName()
 
         if (pName.includes(text) && count < 5)
         {
-            pokemonText = pokemon[i].innerHTML;
-            result += `<li class="result">${pokemonText}</li>`;
+            result = pokemon[i].childNodes;
+            li = document.createElement("li");
+            li.className = "result";
+            for (j = 0; j < result.length; j++)
+            {
+                clone = result[j].cloneNode(true);
+                li.appendChild(clone);
+            }
+            resultList.appendChild(li);
             count++;
         }
     }
@@ -75,13 +82,12 @@ function searchName()
         document.getElementById("resultList").parentNode.removeChild(document.getElementById("resultList"));
     }
 
-    if (result != "")
+    if (result != null)
     {
-       resultList.innerHTML = result;
        resultList.className = "list";
        resultList.id = "resultList";
        document.getElementById("results").appendChild(resultList);
-       result = "";
+       result = null;
     }
 
     if (input.value == "")
@@ -92,7 +98,7 @@ function searchName()
 
 function searchNumber()
 {
-    let result = "";
+    let result;
     let count = 0;
     let resultList = document.createElement("ul");
     let input = document.getElementById("searchNumber");
@@ -106,8 +112,15 @@ function searchNumber()
 
         if ((pNum.indexOf(text) > -1) && count < 5)
         {
-            pokemonText = pokemon[i].innerHTML;
-            result += `<li class="result">${pokemonText}</li>`;
+            result = pokemon[i].childNodes;
+            li = document.createElement("li");
+            li.className = "result";
+            for (j = 0; j < result.length; j++)
+            {
+                clone = result[j].cloneNode(true);
+                li.appendChild(clone);
+            }
+            resultList.appendChild(li);
             count++;
         }
     }
@@ -117,13 +130,12 @@ function searchNumber()
         document.getElementById("resultList").parentNode.removeChild(document.getElementById("resultList"));
     }
 
-    if (result != "")
+    if (result != null)
     {
-       resultList.innerHTML = result;
        resultList.className = "list";
        resultList.id = "resultList";
        document.getElementById("results").appendChild(resultList);
-       result = "";
+       result = null;
     }
 
     if (input.value == "")
