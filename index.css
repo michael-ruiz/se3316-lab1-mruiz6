@@ -69,3 +69,9 @@ body
     background-color: gray; 
     font-family: Arial;   
 }
+
+span
+{
+    font-size: 20px;
+    font-weight: bold;  
+}
